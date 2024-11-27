@@ -21,7 +21,7 @@
     "astro": "^4.16.12",
     "astro-icon": "^1.1.0",
     "astro-pagefind": "^1.5.0",
-    "dayjs": "^1.11.11",
+    "dayjs": "^1.11.13",
     "pagefind": "^1.1.0",
     "preline": "^2.3.0",
     "sharp": "^0.33.4",
