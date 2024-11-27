@@ -1,6 +1,7 @@
-import rss from "@astrojs/rss";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@consts";
+
 import { getCollection } from "astro:content";
-import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
+import rss from "@astrojs/rss";
 
 export async function GET(context) {
   let posts = await getCollection("posts");
@@ -13,7 +14,7 @@ export async function GET(context) {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     site: context.site,
-    customData: `<language>en-US</language>`,
+    customData: `<language>zh-cn</language>`,
     trailingSlash: true,
     items: posts.map((post) => ({
       title: post.data.title,

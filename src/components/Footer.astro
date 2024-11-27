@@ -4,7 +4,8 @@ import Link from "@components/Links.astro";
 import { BRAND_NAME, FooterLinks, SocialLinks } from "@consts";
 const today = new Date();
 ---
-<footer class="mt-auto w-full max-w-[85rem] py-10 mx-auto">
+
+<footer class="mx-auto mt-auto w-full max-w-[85rem] py-10">
   <nav class="mx-auto w-full max-w-[85rem] px-4" aria-label="Footer">
     <div class="flex flex-col items-center sm:flex-row sm:justify-between">
       <div id="navbar-alignment" class="internal-links sm:order-2">
@@ -29,7 +30,7 @@ const today = new Date();
           SocialLinks.map((link) => (
             <button
               type="button"
-              class="relative inline-flex h-12 w-12 items-center gap-x-2 bg-white px-4 py-3 text-neutral-500 hover:text-neutral-800 disabled:pointer-events-none disabled:opacity-50  dark:text-neutral-500 dark:hover:text-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-900"
+              class="relative inline-flex h-12 w-12 items-center gap-x-2 bg-white px-4 py-3 text-neutral-500 hover:text-neutral-800 disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-900 dark:text-neutral-500 dark:hover:bg-neutral-900 dark:hover:text-neutral-200"
             >
               <a
                 href={link.href}
@@ -43,8 +44,15 @@ const today = new Date();
       </div>
 
       <div class="mt-2 sm:order-1 sm:mb-0">
-        <a class="flex-none text-sm text-neutral-500 hover:text-neutral-800 dark:text-neutral-500 dark:hover:text-neutral-200" href="/" aria-label="Brand"
-          >{BRAND_NAME} &copy; {today.getFullYear()}</a
+        <a
+          class="flex-none text-sm text-neutral-500 hover:text-neutral-800 dark:text-neutral-500 dark:hover:text-neutral-200"
+          href="/"
+          aria-label="Brand">{BRAND_NAME} &copy; {today.getFullYear()}</a
+        >
+        <a
+          class="flex-none text-sm text-neutral-500 hover:text-neutral-800 dark:text-neutral-500 dark:hover:text-neutral-200"
+          href="https://beian.miit.gov.cn/"
+          target="_blank">蜀ICP备2024085127号</a
         >
       </div>
     </div>
